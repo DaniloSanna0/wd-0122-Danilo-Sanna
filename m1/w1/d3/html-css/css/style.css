@@ -1,0 +1,12 @@
+/*
+1x header
+*/ 
+h1{
+    font-weight: bold;
+    font-family: 'Passions Conflict', corsivo;
+}
+body{
+    font-family: 'Passions Conflict', corsivo;
+    color: brown !important;
+    max-width: 100%;
+}

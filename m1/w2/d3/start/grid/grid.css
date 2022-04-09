@@ -1,0 +1,16 @@
+.novità{
+    display: grid;
+    position: absolute;
+    top: 75vh;
+    right: 0;
+    width: 300px;
+    grid-column-end: auto;
+    position: fixed;
+}
+main{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "article aside"
+    "article section";
+}

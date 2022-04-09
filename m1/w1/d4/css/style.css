@@ -1,0 +1,44 @@
+/*general styles*/
+h1, h2, h3, h4, h5, h6{
+font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: brown;
+}
+a:hover{
+    color: blue;
+}
+/*header*/
+#header{
+    background-color: blue;
+    box-shadow: 10px 10 px 10px;
+
+}
+#main-nav li{
+    display: inline-block;
+    background-color: aliceblue;
+    margin-left: -4px;
+    padding: 4px;
+    width: calc(100% / 3 -10px);
+}
+#header a:hover{
+    color: aliceblue;
+    overflow: hidden;
+}
+#header li:hover{
+    background-color: cadetblue;
+    
+}
+#header li:hover a{
+    background-color: cadetblue;
+    color: chartreuse;
+}
+#prima-section{
+    padding: 50px;
+    background-image: url(../img/logo.png);
+    background-position: -7px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}

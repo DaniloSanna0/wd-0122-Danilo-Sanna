@@ -1,0 +1,69 @@
+/* IMPOSTAZIONI GENERALI */
+
+/* HEADER */
+body{
+margin: auto;
+font-size: 25px;
+width: 500px;
+font-weight: bold;
+}
+header{
+background-color: aqua;
+border-radius: 15px;
+padding: 10px;
+text-align: center;
+}
+@font-face{
+    font-family: 'Passions Conflict', corsivo;
+}
+
+/* MAIN */
+#number{
+    color: brown;
+}
+figure{
+    border: 5px;
+    border-color: black;
+    padding: 10px;
+    text-align: center;
+    outline: 1px solid black;
+    margin: auto;
+}
+address{
+    display: inline-block;
+}
+blockquote{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 15px;
+}
+h1{
+    color: white;
+}
+#mario{
+    background-color: white;
+    color: aqua;
+}
+h2{
+    color: royalblue;
+    text-align: center;
+    font-size: 30px;
+}
+mark{
+    background-color: cornflowerblue;
+    color: white;
+}
+
+/* ELEMENTI NEL MAIN */
+
+/* FOOTER */
+footer{
+    background-color: rgb(63, 63, 63);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+}
+a{
+    color: brown;
+}

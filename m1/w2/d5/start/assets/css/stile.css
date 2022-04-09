@@ -1,0 +1,90 @@
+/* IMPOSTAZIONI GENERALI */
+body{
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* HEADER */
+header{
+    position: sticky;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+i{
+    font-size: 30px;
+    color: #e42424;
+}
+#menu{
+    background-color: brown;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+#apri-menu{
+    display:none;
+}
+input:checked + #menu{
+    height: 100px;
+}
+/* MAIN */
+.s1, .s1>div>a{
+    color: white;
+    text-decoration: none;
+}
+.s1>div>a{
+    margin-left: 20px;
+    padding: 15px;
+    background: rgb(69,201,255);
+    background: -moz-linear-gradient(90deg, rgba(69,201,255,1) 11%, rgba(12,5,76,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(69,201,255,1) 11%, rgba(12,5,76,1) 100%);
+    background: linear-gradient(90deg, rgba(69,201,255,1) 11%, rgba(12,5,76,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#45c9ff",endColorstr="#0c054c",GradientType=1);
+    box-shadow: 2px 2px 15px #d3d3d3 ;
+}
+.s1{
+    background: url(../images/banner.jpg) center;
+    height: 550px;
+    background-size: cover;
+    background-position-x: center;
+}
+.scuro{
+    background-color:rgba(0,0,0,0.3);
+}
+.s1>div>p{
+    margin: 15px 20px ;
+
+}
+h1{
+    display: inline-block;
+    font-size: 4rem;
+    line-height: normal;
+    margin: 35px 20px 10px 20px;
+}
+section:nth-of-type(2)>h2{
+    font-size: 3,5rem;
+    line-height: 1.1;
+    font-size: 50px;
+    margin: 50px 20px;
+}
+section:nth-of-type(2)>p{
+    margin: 50px 20px;
+
+}
+.s2{
+    text-align: center;
+}
+.lni-comments{
+    font-size: 60px;
+    margin-bottom: -50px;
+    color:#e42424
+}
+/* FOOTER */
+footer{
+    color: rgb(238, 238, 238);
+}
+
+/* RESPONSIVE */

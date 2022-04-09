@@ -1,0 +1,35 @@
+@media (min-width:500px){
+    header div{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    aside{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+}
+.article{
+    margin:5px
+}
+@media (min-width:800px) {
+    aside{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        position: absolute;
+        top: 20vh;
+        right: 0;
+    }
+    body{
+        position: relative;
+
+    }
+    main{
+        width: calc(100% / 1.5);
+    }
+
+}

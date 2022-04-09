@@ -1,0 +1,19 @@
+/*header*/
+@media (min-width: 768px) {
+    header{
+        width: calc(100% / 3 - 2px);
+        text-align: left;
+        position: fixed;
+        font-size:x-large;
+    }
+    main, footer{
+        width: 70%;
+        position: right;
+        display: inline-block;
+        margin-left: 36%;
+        font-size: large;
+    }
+    iframe{
+        height: 500px;
+    }
+}
