@@ -150,6 +150,27 @@ section:nth-of-type(2)>p{
 .s4>div>h4{
     font-size: 50px;
 }
+#chi{
+    display: inline-block;
+background-color: white;
+color: #000;
+text-align: center;
+padding: 10px;
+height: 600px;
+margin-bottom: 20px;
+}
+section>img{
+    width: 100%;
+}
+.c{
+    text-align: center;
+}
+h2{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
 /* FOOTER */
 footer{
     background-color: rgb(238, 238, 238);
