@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">  
     <title>Calcolatrice</title>
 </head>
 <body>
+    <div>
     <input type="text" id="display">
-    <button data-numero="1" onclick="aggiungiNumero(this)">1</button>
-    <button onclick="aggiungiNumero(this)">2</button>
-    <button onclick="aggiungiNumero(this)">3</button>
-    <button onclick="aggiungiNumero(this)">4</button>
-    <button onclick="aggiungiNumero(this)">5</button>
-    <button onclick="aggiungiNumero(this)">6</button>
-    <button onclick="aggiungiNumero(this)">7</button>
-    <button onclick="aggiungiNumero(this)">8</button>
-    <button onclick="aggiungiNumero(this)">9</button>
-    <button onclick="aggiungiNumero(this)">0</button>
-    <button onclick="aggiungiNumero(this)">+</button>
-    <button onclick="aggiungiNumero(this)">-</button>
-    <button onclick="aggiungiNumero(this)">/</button>
-    <button onclick="moltiplicazione()">X</button>
-    <button onclick="risultato()">=</button>
-    <button onclick="cancella()">C</button>
-    
+        <section>
+            <button data-numero="1" onclick="aggiungiNumero(this)">1</button>
+            <button onclick="aggiungiNumero(this)">2</button>
+            <button onclick="aggiungiNumero(this)">3</button>
+            <button onclick="cancella()">C</button>
+            <button onclick="aggiungiNumero(this)">4</button>
+            <button onclick="aggiungiNumero(this)">5</button>
+            <button onclick="aggiungiNumero(this)">6</button>
+        <button onclick="aggiungiNumero(this)">+</button>
+            <button onclick="aggiungiNumero(this)">7</button>
+            <button onclick="aggiungiNumero(this)">8</button>
+            <button onclick="aggiungiNumero(this)">9</button>
+            <button onclick="aggiungiNumero(this)">-</button>
+            <button onclick="aggiungiNumero(this)" class="bottom1">/</button>
+            <button onclick="aggiungiNumero(this)">0</button>
+            <button onclick="moltiplicazione()">X</button>
+            <button onclick="risultato()" class="bottom2">=</button>
+        </section>
+    </div>
     <script src="script.js/script.js"></script>
 </body>
 </html>
