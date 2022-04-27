@@ -17,6 +17,6 @@ document.write("<br>" + r.getMinutes())
 
 document.write("<br>" + d.getDay())
 
-document.write("<br>" + d.getHours() + ":" + d.getMinutes() + "<br>")
+document.write("<br>" + d.getHours() + ":" + d.getMinutes() + ":"  + d.getSeconds()  + "<br>" )
 
 document.write(d.toLocaleDateString('it-IT'))
