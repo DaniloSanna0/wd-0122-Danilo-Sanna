@@ -1,0 +1,32 @@
+@import "button";
+body{
+    background-color: darkorchid;
+    .container{
+        margin: 0px 50px;
+    }
+}
+ul{ list-style-type: none;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 50px;
+        li{
+            margin: 10px;
+            a{text-decoration: none;
+                color: rgb(255, 255, 255);
+                font-weight: bold;
+                font-size: 50px;}
+        }
+}
+.showcase-content{
+    display: flex;
+    margin: 100px 150px;
+
+    h1{
+        font-size: 50px;
+    }
+    p{
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+}
