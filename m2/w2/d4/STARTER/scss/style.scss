@@ -1,0 +1,65 @@
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+header{
+    nav{
+        ul{
+            display: flex;
+            background-color: blue;
+            list-style-type: none;
+            li{
+                a{
+                    color: white;
+                    text-decoration: none;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+
+#main{
+    margin:0px 150px ;
+    margin-right: 300px;
+    position: relative;
+    @media screen and (max-width: 768px){
+        margin:0px;
+        margin-top: 50px;
+    }
+}
+
+#sidebar{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    font-weight: bold;
+        @media screen and (max-width: 768px){
+         display: flex;
+         right: auto;
+         text-align: center;
+        }
+        ul{
+            list-style-type: none;
+            @media screen and (max-width: 768px){
+             display: flex;
+            }
+                li{
+                    text-decoration: underline dotted;
+                    margin: 10px;
+                }
+            }
+}
+
+@mixin button {
+    color: white;
+    background-color: orange;
+    padding: 10px;
+    border: none;
+}
+
+.warning-button{
+    @include button();
+}
+
