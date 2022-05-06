@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header >
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark container">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Fixed navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item"><a class="nav-link" href="#"><i class="bi-twitter"></i></a></li>
+              <li class="nav-item"><a class="nav-link" href="#"><i class="bi-twitch"></i></a></li>
+              <li class="nav-item"><a class="nav-link" href="#"><i class="bi-discord"></i></a></li>
+              <li class="nav-item"><a class="nav-link" href="#"><i class="bi-whatsapp"></i></a></li>
+          </ul>
+          </div>
+        </div>
+      </nav>               
+    </header>
+    <main>
+      <div class="showcase-content container">
+        <div>
+            <h1>Sviluppo e Web Design</h1>
+            <p class="my-1">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est eligendi tempore atque laborum. Quisquam nemo at non. Corrupti, vitae dolore.
+            </p>
+            <a href="#" class="btn primary">Approfondisci</a>
+            <a href="#" class="btn secondary">Accedi</a>
+        </div>
+        <img src="https://picsum.photos/id/0/450/450" />
+      </div>
+
+      <div class="container text-center fs-1">Partnerships
+        <div class="row">
+            <div class="col-md-3 col-lg-3 partnerships-logo"><img src="img/company-1.png" alt=""
+                    class="img-fluid"></div>
+            <div class="col-md-3 col-lg-3 partnerships-logo"><img src="img/company-2.png" alt=""
+                    class="img-fluid"></div>
+            <div class="col-md-3 col-lg-3 partnerships-logo"><img src="img/company-3.png" alt=""
+                    class="img-fluid"></div>
+            <div class="col-md-3 col-lg-3 partnerships-logo"><img src="img/company-4.png" alt=""
+                    class="img-fluid"></div>
+        </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row text-center py-5">
+          <h4 class="display-4 mb-3">Le opinioni dei nostri clienti</h4>
+          <div class="separator"></div>
+          <div class="row align-items-center">
+              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                      <!-- Testimonianza 1 -->
+                      <div class="carousel-item active">
+                          <!-- Inizio la creazione delle card per il carosello -->
+                          <div class="reviews-card">
+                              <p class="lh-lg">
+                                  <i class="bi bi-cht-right-quote"></i>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                  tempor
+                                  incididunt ut labore et dolore magna aliqua.
+                              </p>
+                          </div>
+                          <div class="reviews-img">
+                              <img src="img/reviews/reviews-1.jpg" alt="reviews-1" class="img-fluid rounded-circle">
+                          </div>
+                          <div class="reviews-name">
+                              <h3>Jamie Batty</h3>
+                          </div>
+                      </div>
+                      <!-- Testimonianza 2 -->
+                      <div class="carousel-item">
+                          <!-- Inizio la creazione delle card per il carosello -->
+                          <div class="reviews-card">
+                              <p class="lh-lg">
+                                  <i class="bi bi-chat-right-quote"></i>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                  tempor
+                                  incididunt ut labore et dolore magna aliqua.
+
+                              </p>
+                          </div>
+                          <div class="reviews-img">
+                              <img src="img/reviews/reviews-2.jpg" alt="reviews-2" class="img-fluid rounded-circle">
+                          </div>
+                          <div class="reviews-name">
+                              <h3>Samantha Loret</h3>
+                          </div>
+                      </div>
+                      <!-- Testimonianza 3 -->
+                      <div class="carousel-item">
+                          <!-- Inizio la creazione delle card per il carosello -->
+                          <div class="reviews-card">
+                              <p class="lh-lg">
+                                  <i class="bi bi-chat-right-quote"></i>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                  tempor
+                                  incididunt ut labore et dolore magna aliqua.
+                              </p>
+                          </div>
+                          <div class="reviews-img">
+                              <img src="img/reviews/reviews-3.jpg" alt="reviews-3" class="img-fluid rounded-circle">
+                          </div>
+                          <div class="reviews-name">
+                              <h3>Mike Winter</h3>
+                          </div>
+                      </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+</div>
+
+    </main>
+    <div class="container">
+      <footer class="row row-cols-5 py-5 my-5 border-top">
+        <div class="col">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <p class="text-muted">© 2021</p>
+        </div>
+    
+        <div class="col">
+    
+        </div>
+    
+        <div class="col">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+    
+        <div class="col">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+    
+        <div class="col">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+
+   <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
