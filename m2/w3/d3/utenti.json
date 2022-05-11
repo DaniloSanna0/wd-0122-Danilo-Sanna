@@ -1,0 +1,36 @@
+{
+    "Utenti": [
+        {
+            "nome": "Mario",
+            "year": 1999,
+            "cognome": "puddu",
+            "carattere": [
+                {
+                    "tipo": "estroverso"
+                },
+                {
+                    "tipo": "alto"
+                },
+                {
+                    "tipo": "creativoe"
+                }
+            ]
+        },
+        {
+            "nome": "Demon",
+            "year": 1971,
+            "cognome": "Genesis",
+            "carattere": [
+                {
+                    "tipo": "visionario"
+                },
+                {
+                    "tipo": "allegro"
+                },
+                {
+                    "tipo": "appiccicoso"
+                }
+            ]
+        }
+    ]
+}
