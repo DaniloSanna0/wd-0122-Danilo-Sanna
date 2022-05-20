@@ -1,6 +1,7 @@
 
 body{
     font-family: 'Lato', sans-serif !important;
+    overflow-x: hidden;
 }
 
 table{
