@@ -7,6 +7,28 @@ target.append(tabella)
 
 let users = []
 
+function typingEffect(element, speed){
+  let text=element.innerHTML;
+  element.innerHTML="";
+ var i=0;
+  var timer=setInterval(function(){
+    if(i<text.length){
+      element.append(text.charAt(i))
+      i++;
+    }else{
+      clearInterval(timer);
+    }
+  },speed)
+  
+}
+
+const titoloBw = document.querySelector('.titolo-bw');
+
+setInterval(() => {
+    typingEffect(titoloBw,150)
+}, 3500);
+
+
 function createTable(arrayTr) {
 
     tabella.innerHTML = ""
@@ -61,17 +83,14 @@ function createTable(arrayTr) {
         let usernameInp = document.querySelector('#username')
         let emailInp = document.querySelector('#email')
         let telefonoInp = document.querySelector('#telefono')
+        let regex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gi
+        let emailCondition
         
-        let conditionEmail = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim
-        
-
         form.addEventListener('input', function () {
+            emailCondition = emailInp.value.match(regex)
+            console.log(emailCondition)
 
-            let match = emailInp.value.match(conditionEmail)
-
-            console.log(match);
-
-            if (nomeInp.value.length >= 2 && match && telefonoInp.value != '') {
+            if (nomeInp.value.length >= 2 && usernameInp.value != '' && emailCondition && telefonoInp.value != '') {
                 newBtn.setAttribute('data-bs-dismiss', 'modal')
             } else {
                 newBtn.removeAttribute('data-bs-dismiss')
@@ -93,9 +112,7 @@ function createTable(arrayTr) {
                 phone: telefono
             }
 
-            let match = email.match(conditionEmail)
-
-            if (nomeInp.value.length >= 2 && usernameInp.value != '' && match && telefonoInp.value != '') {
+            if (nomeInp.value.length >= 2 && usernameInp.value != '' && emailCondition && telefonoInp.value != '') {
 
                 fetch(APPURL, {
                     method: 'POST',
@@ -209,47 +226,82 @@ fetch(APPURL)
 
                 let divEdit = document.createElement('div')
                 divEdit.innerHTML = `
+            <form id="edit-form">
             <h6>Nome:</h6>
-            <input class="form-control mb-3" type="text" value="${res[j].name}">
+            <input id="edit-name" class="form-control mb-3" type="text" value="${res[j].name}">
             <h6>Username:</h6>
-            <input class="form-control mb-3" type="text" value="${res[j].username}">
+            <input id="edit-username" class="form-control mb-3" type="text" value="${res[j].username}">
             <h6>Email:</h6>
-            <input class="form-control mb-3" type="email" value="${res[j].email}">
+            <input id="edit-email" class="form-control mb-3" type="email" value="${res[j].email}">
             <h6>Telefono:</h6>
-            <input class="form-control mb-3" type="tel" value="${res[j].phone}">
+            <input id="edit-phone" class="form-control mb-3" type="tel" value="${res[j].phone}">
+            <div class="modal-footer">
+            <button id="annulla-modifica" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+            <button id="edit" type="button" class="btn btn-danger">Modifica</button>
+            </div>
+            </form>
             `
 
                 targetEdit.append(divEdit)
                 console.log(idEdit);
 
                 let editBtn = document.querySelector('#edit')
-                editBtn.addEventListener('click', function edit() {
-                    editBtn.removeEventListener('click', edit)
 
-                    fetch(APPURL + '/' + res[j].id, {
-                        method: 'PATCH'
-                    })
-                        .then(res => {
-                            if (res.status == 200 && res.url.length == 44) {
-                                Swal.fire({
-                                    icon: 'success',
-                                    title: 'Utente modificato!',
-                                    text: `Hai modificato correttamente l'utente con id: ${idEdit}`
-                                })
-                            } else {
-                                Swal.fire({
-                                    icon: 'error',
-                                    title: 'Ops!',
-                                    text: `Qualcosa è andato storto!`
-                                })
-                            }
+                let editForm = document.querySelector('#edit-form')
+
+                let nomeInp = document.querySelector('#edit-name')
+                let usernameInp = document.querySelector('#edit-username')
+                let emailInp = document.querySelector('#edit-email')
+                let telefonoInp = document.querySelector('#edit-phone')
+                let regex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gi
+                let emailCondition
+
+                editForm.addEventListener('input', function () {
+                    emailCondition = emailInp.value.match(regex)
+                    console.log(emailCondition)
+        
+                    if (nomeInp.value.length >= 2 && usernameInp.value != '' && emailCondition && telefonoInp.value != '') {
+                        editBtn.setAttribute('data-bs-dismiss', 'modal')
+                    } else {
+                        editBtn.removeAttribute('data-bs-dismiss')
+                    }
+                })
+
+                editBtn.addEventListener('click', function canc() {
+                    // editBtn.removeEventListener('click', canc)
+
+                    if (nomeInp.value.length >= 2 && usernameInp.value != '' && emailCondition && telefonoInp.value != ''){
+                        fetch(APPURL + '/' + res[j].id, {
+                            method: 'PATCH'
                         })
+                            .then(res => {
+                                if (res.status == 200) {
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Utente modificato!',
+                                        text: `Hai modificato correttamente l'utente con id: ${idEdit}`
+                                    })
+                                } else {
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Ops!',
+                                        text: `Qualcosa è andato storto!`
+                                    })
+                                }
+                            })
+                    }else{
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Ops!',
+                            text: `Modifica i campi correttamente`
+                        })
+                    }
 
                 })
             })
 
             let btnDelete = document.createElement('button')
-            btnDelete.classList.add('btn', 'btn-danger', 'cestino', 'p-1', 'my-1', 'ms-1', 'pr-0', 'col-12', 'col-lg-3')
+            btnDelete.classList.add('btn', 'btn-danger', 'p-1', 'my-1', 'ms-1', 'pr-0', 'col-12', 'col-lg-3')
             btnDelete.innerHTML = '<i class="bi bi-trash"></i>'
             btnDelete.setAttribute('data-bs-toggle', 'modal')
             btnDelete.setAttribute('data-bs-target', '#deleteModal')
@@ -269,7 +321,7 @@ fetch(APPURL)
                 let btnCancella = document.querySelector('#cancella')
                 btnCancella.addEventListener('click', function canc() {
                     btnCancella.removeEventListener('click', canc)
-                    // this.removeEventListener('click', arguments.callee)
+
                     fetch(APPURL + '/' + idDelete, {
                         method: 'DELETE'
                     })
@@ -320,7 +372,8 @@ fetch(APPURL)
             }
             let pageItem = document.querySelectorAll('.page-item')
             for (let page of pageItem) {
-                page.addEventListener('click', function () {
+                page.addEventListener('click', function (e) {
+                    e.preventDefault()
                     document.querySelector('.active').classList.remove('active')
                     this.classList.add('active')
                     tabella.innerHTML = ''
@@ -399,7 +452,7 @@ fetch(APPURL)
         
         selectUsername.addEventListener('input', function () {
 
-            // createPageLinks()
+            createPageLinks()
             let x = [...users]
             
             let newUsers = []
