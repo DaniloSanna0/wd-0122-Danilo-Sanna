@@ -1,0 +1,29 @@
+<app-header></app-header>
+<h1>Seleziona l'{{title}}</h1>
+<button (click)="aggiungi()">Aggiungi utente</button>
+
+
+<button (click)="cambia('epilogo')">clicca</button>
+
+<ul>
+  <li *ngFor="let e of episodi">
+{{e}}
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <th>nome</th>
+    <th>cognome</th>
+    <th>azioni</th>
+  </tr>
+  <tr *ngFor="let u of users">
+    <td>{{u.username}}</td>
+    <td>{{u.name}}</td>
+    <td>
+      <button (click)="details(u.id)">EDIT</button>
+      <button (click)="elimina(u.id)">DELTE</button>
+    </td>
+  </tr>
+ 
+</table>
