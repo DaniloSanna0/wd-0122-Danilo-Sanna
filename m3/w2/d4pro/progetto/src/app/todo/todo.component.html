@@ -1,0 +1,26 @@
+<h1>todos</h1>
+
+<form>
+    <input type="text" [(ngModel)]="todoa.title" name="testo">
+    <button (click)="add()">Aggiungi utente</button>
+</form>
+
+<form>
+<div *ngFor="let item of arrey1">{{item.title}} + {{item.completed}}<button (click)="remove()">Del</button>
+</div>
+
+</form>
+
+<!-- <hr>
+
+<ng-container *ngIf="todoa; else empty">
+    ci sono dei todos
+</ng-container>
+
+<ng-template #loading>
+    caricamento in corso...
+</ng-template>
+
+<ng-template #empty>
+    non ci sono todo
+</ng-template> -->
