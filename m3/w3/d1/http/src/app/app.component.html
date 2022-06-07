@@ -1,0 +1,11 @@
+<div class="container">
+<div>{{favCounter}}</div>
+<div class="card-img-top" *ngFor="let p of poto">
+  <img [src]="p.thumbnailUrl">
+  <div class="card-body">
+    <h5 class="card-title">{{p.title}}</h5>
+    <button (click)="elimina(p.id)">Elimina</button>
+    <button (click)="like()">Like</button>
+  </div>
+</div>
+</div>
