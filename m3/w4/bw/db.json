@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Post informativo",
+      "body": "Bravo ottimo post, complimenti, veramente ben argomentato, tanto di cappella",
+      "date": "5/5/2022 9:18"
+    }
+  ],
+  "users": [
+    {
+      "email": "cagnotto.f@gmail.com",
+      "password": "$2a$10$8dEW3NCyzBKDcOb8Sn66euvHbg1QWxnksj1yKXjgw7sSEHm8R1rKy",
+      "nome": "Francesco",
+      "cognome": "Cagnotto",
+      "id": 10
+    },
+    {
+      "email": "fikuxy@mailinator.com",
+      "password": "$2a$10$Z/h0RcEXQVGVZ5NWoX6i5.GhA0BEE1pUz0u2nhogN1/Qj1SYTPenO",
+      "nome": "Rerum fugiat aliqui",
+      "cognome": "Tempore excepteur v",
+      "id": 11
+    }
+  ]
+}
